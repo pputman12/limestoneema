@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Limestoneema</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <h1>Limestone County Emergency Management Agency</h1>
+  We are planning to save your life!
+  <br>
+  
+  <table>
+    <td><tr> <%= link_to 'Home', root_path %> | <%= link_to "Staff", page_path("Staff") %>
+<%= yield %>
+
+</body>
+</html>
