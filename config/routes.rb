@@ -1,4 +1,6 @@
 Limestoneema::Application.routes.draw do
+  resources :pictures
+
   resources :hazards
 
   resources :pages
