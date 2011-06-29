@@ -11,9 +11,15 @@
   We are planning to save your life!
   <br>
   
+  
   <table>
-    <td><tr> <%= link_to 'Home', root_path %> | <%= link_to "Staff", page_path("Staff") %>
+    <tr><td> <%= link_to 'Home', root_path %> | <%= link_to "Staff", page_path("Staff") %> | <%= link_to "EOC", page_path("eoc") %> | <%= link_to "Pictures", page_path("Pictures") %> | <%= link_to "External Links", page_path("External-Links") %> | <%= link_to "Latest News", page_path("Latest-News")%><br>
+
+    <img src="http://www.fema.gov/graphics/threat.gif" alt="Current Homeland Security Threat Level">
+      
 <%= yield %>
+    </tr></td>
+  </table>
 
 </body>
 </html>
