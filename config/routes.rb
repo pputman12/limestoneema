@@ -1,4 +1,6 @@
 Limestoneema::Application.routes.draw do
+  resources :hazards
+
   resources :pages
 
   devise_for :users

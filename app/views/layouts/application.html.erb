@@ -2,24 +2,64 @@
 <html>
 <head>
   <title>Limestoneema</title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "main" %>
+  <%= stylesheet_link_tag    "scheme" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <h1>Limestone County Emergency Management Agency</h1>
-  We are planning to save your life!
-  <br>
-  
-  
-  <table>
-    <tr><td> <%= link_to 'Home', root_path %> | <%= link_to "Staff", page_path("Staff") %> | <%= link_to "EOC", page_path("eoc") %> | <%= link_to "Pictures", page_path("Pictures") %> | <%= link_to "External Links", page_path("External-Links") %> | <%= link_to "Latest News", page_path("Latest-News")%><br>
 
-    <img src="http://www.fema.gov/graphics/threat.gif" alt="Current Homeland Security Threat Level">
+<div id="main">
+  <div id ="header" class="box">
+  <h1 id="logo">Limestone County Emergency Management Agency</h1>
+  <p id="slogan"> We are planning to save your life!</p>
+  
+  </div>
+  
+  
+  <div id='nav' class="box">
+    
+    <ul>
+      <li><%= link_to 'Home', root_path %><li>
+      <li><%= link_to 'Hazards', hazards_path %><li>
+      <li><%= link_to "Staff", page_path("Staff") %><li>
+      <li><%= link_to "EOC", page_path("eoc") %><li>
+      <li><%= link_to "Pictures", page_path("Pictures") %><li>
+      <li><%= link_to "External Links", page_path("External-Links") %><li>
+      <li><%= link_to "Latest News", page_path("Latest-News")%></li>
+    </ul>
+  </div>
+  
+  <hr class="noscreen" />
+  
+  <div id="content" class="box">
+    
+    <div class="box">
       
-<%= yield %>
-    </tr></td>
-  </table>
+      <div id="aside"> 
+          <h4 class="hx-style01"><span>Current Threat Level</span></h4> 
+            <ul class="ul-list box"> 
+              <li><img src="http://www.fema.gov/graphics/threat.gif" alt="Current Homeland Security Threat Level" /></li> 
+            </ul> 
+      </div> <!-- /aside --> 
+  
+      <!-- Top story (left column) --> 
 
+      <div id="topstory"> 
+        <div id="topstory-title"> 
+            <h2></h2> 
+        </div> <!-- /topstory-title --> 
+        
+          <div id="topstory-perex"> 
+            <%= yield %>
+          </div> <!-- /topstory-perex -->     
+      </div> <!-- /topstory --> 
+      <hr class="noscreen" /> 
+
+    </div> <!-- /box -->
+  </div>
+   
+
+</div>
 </body>
 </html>
