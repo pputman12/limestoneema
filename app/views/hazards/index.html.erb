@@ -1,0 +1,10 @@
+<% @hazards.group_by(&:category).each do |category, hazards| %>
+  <h3><%= category %></h3>
+  <% hazards.each do | hazard | %>
+    <%= link_to hazard.title, hazard %> <br>
+  <% end %>
+<% end %>
+  
+<br />
+
+<%= link_to 'New Hazard', new_hazard_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Category:</b>
+  <%= @hazard.category %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @hazard.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @hazard.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_hazard_path(@hazard) %> |
+<%= link_to 'Back', hazards_path %>
