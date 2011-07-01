@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
   
   def show
-    @page = Page.find_by_title(params[:id].gsub('-', ' '))
+    @page = Page.where(["LOWER(title) = ?", params[:id].gsub('-', ' ').downcase]).first
   end
 
   def home
